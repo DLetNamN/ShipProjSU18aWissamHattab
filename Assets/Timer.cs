@@ -8,10 +8,10 @@ public class Timer : MonoBehaviour {
     public float timer = 0; //Timer variable.
 
 
-    void Timer()
+    void TimerObject()
     {
-        timer = timer + 1; //This is to make the timer add a second each second, instead of each frame.
-        Debug.Log(string.Format("Timer: {0}", timer * Time.deltaTime));
+        timer += Time.deltaTime; //To make the number follow the Time.deltaTime format, and work only each second.
+        Debug.Log(string.Format("Timer: {0}", timer)); //To display the time.
     }
 
 
@@ -22,6 +22,6 @@ public class Timer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Timer();
+        TimerObject(); //To run the timer.
     }
 }

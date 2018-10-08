@@ -22,7 +22,7 @@ public class Flight : MonoBehaviour
             transform.Rotate(new Vector3(0, 0, -turnSpeed) * Time.deltaTime); //Makes the vehicle turn/rotate.
         }
         if (Input.GetKey(KeyCode.A)) //Buttonpress for left rotation.
-
+             
         {
             transform.Rotate(new Vector3(0, 0, leftTurnSpeed) * Time.deltaTime); //Makes the vehicle turn, this time the rotation isn't in the negative, so as to turn the opposite direction.
         }
