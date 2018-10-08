@@ -20,7 +20,7 @@ public class Flight : MonoBehaviour
         {
 
             transform.Rotate(new Vector3(0, 0, -turnSpeed) * Time.deltaTime);
-            PlaneSprite.color = new Color(1f, 1f, 10f);
+            PlaneSprite.color = new Color(0f, 0f, 10f);
 
         }
         if (Input.GetKey(KeyCode.A))
