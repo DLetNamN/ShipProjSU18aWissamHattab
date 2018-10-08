@@ -5,10 +5,9 @@ using UnityEngine;
 public class Flight : MonoBehaviour
 {
 
-    public float moveSpeed = 1;
+    public float moveSpeed = 1f;
     public float turnSpeed = 45f;
-    private SpriteRenderer PlaneSprite;
-    private Color planeColor;
+
 
 
     void movement()
@@ -20,7 +19,7 @@ public class Flight : MonoBehaviour
         {
 
             transform.Rotate(new Vector3(0, 0, -turnSpeed) * Time.deltaTime);
-            PlaneSprite.color = new Color(0f, 0f, 10f);
+
 
         }
         if (Input.GetKey(KeyCode.A))
@@ -29,7 +28,13 @@ public class Flight : MonoBehaviour
             transform.Rotate(0, 0, turnSpeed * Time.deltaTime);
 
         }
-        transform.Translate(0, 1f * Time.deltaTime, 0);
+
+        transform.Translate(0, 1 * Time.deltaTime, 0);
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(0, -0.5f * Time.deltaTime, 0);
+        }
     }
 
 

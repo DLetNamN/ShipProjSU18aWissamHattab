@@ -12,7 +12,11 @@ public class PlaneColor : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D))
         {
-            PlaneSprite.color = new Color(0f, 0f, 10f);
+            PlaneSprite.color = new Color(0f, 0f, 1f);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            PlaneSprite.color = new Color(0f, 1f, 0f);
         }
     }
 
