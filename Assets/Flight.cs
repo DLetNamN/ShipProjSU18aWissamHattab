@@ -5,9 +5,9 @@ using UnityEngine;
 public class Flight : MonoBehaviour
 {
 
-    public float moveSpeed = 1f;
-    public float turnSpeed = 45f;
-
+    private float moveSpeed = 1f; //moveSpeed variable.
+    private float turnSpeed = 45f; //Turn/rotaion speed variable.
+    
 
 
     void movement()
@@ -15,29 +15,24 @@ public class Flight : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D)) //Buttonpress for right rotation.
         {
 
-            transform.Rotate(new Vector3(0, 0, -turnSpeed) * Time.deltaTime);
-
-
+            transform.Rotate(new Vector3(0, 0, -turnSpeed) * Time.deltaTime); //Makes the vehicle turn/rotate.
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A)) //Buttonpress for left rotation.
+
         {
-
-            transform.Rotate(0, 0, turnSpeed * Time.deltaTime);
-
+            transform.Rotate(new Vector3(0, 0, turnSpeed) * Time.deltaTime); //Makes the vehicle turn, this time the rotation isn't in the negative, so as to turn the opposite direction.
         }
 
-        transform.Translate(0, 1 * Time.deltaTime, 0);
+        transform.Translate(0, 1 * Time.deltaTime, 0); //Keeps the ship moving/
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S)) //Buttonpress to slow down.
         {
-            transform.Translate(0, -0.5f * Time.deltaTime, 0);
+            transform.Translate(0, -0.5f * Time.deltaTime, 0); //Since the movement is constant, I just have to subtract half of the speed.
         }
     }
-
-
 
     // Use this for initialization
     void Start()
@@ -49,6 +44,6 @@ public class Flight : MonoBehaviour
     void Update()
     {
         movement();
-
+        
     }
 }

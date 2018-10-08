@@ -6,13 +6,13 @@ public class PlaneColor : MonoBehaviour
 {
 
     public SpriteRenderer PlaneSprite;
-    public Color planeColor;
+
 
     void ColorChanger()
     {
         if (Input.GetKey(KeyCode.D))
         {
-            PlaneSprite.color = new Color(0f, 0f, 1f);
+            PlaneSprite.color = new Color(0f, 0f, 1f); //This is to change the color of the PlaneSprite. I made this a separate script to add it onto each part of the plane, so as to not affect it by the other parts of the script.
         }
         if (Input.GetKey(KeyCode.A))
         {
