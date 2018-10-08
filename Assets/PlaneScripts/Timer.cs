@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Timer : MonoBehaviour {
+public class Timer : MonoBehaviour
+{
 
 
     public float timer = 0; //Timer variable.
@@ -16,12 +17,14 @@ public class Timer : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         TimerObject(); //To run the timer.
     }
 }

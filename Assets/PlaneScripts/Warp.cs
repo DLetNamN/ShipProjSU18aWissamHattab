@@ -1,27 +1,44 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warp : MonoBehaviour {
+public class Warp : MonoBehaviour
+{
 
-    private float ShipPosX;
-    private float ShipPosY;
 
-    void Warping()
+
+    void Warps()
     {
-        if (ShipPosY < 6.30)
+        if (transform.position.y >= 6.3) //This checks if the plane is above 6.30 on the Y axis, which is slightly off-screen
         {
-
+            transform.position = new Vector3(0, -4.8f, 0); //This sends the plane to the opposite side.
+        }
+        if (transform.position.x >= 8.5) //This checks the same as before, but on the X axis.
+        {
+            transform.position = new Vector3(-8.5f, 0, 0); //sends it around.
+        }
+        if (transform.position.y <= -6.30) //This does the same as before, but for the opposite side of the Y axis.
+        {
+            transform.position = new Vector3(0, 4.8f, 0); //Blah blah, sends it around
+        }
+        if (transform.position.x <= -8.5) //Same for the opposite of the X axis
+        {
+            transform.position = new Vector3(8.5f, 0, 0); //Sends around.
         }
     }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Warps();
+    }
 }
