@@ -7,6 +7,7 @@ public class Flight : MonoBehaviour
 
     private float moveSpeed = 1f; //moveSpeed variable.
     private float turnSpeed = 45f; //Turn/rotaion speed variable.
+    private float leftTurnSpeed = 22.5f;
     
 
 
@@ -23,7 +24,7 @@ public class Flight : MonoBehaviour
         if (Input.GetKey(KeyCode.A)) //Buttonpress for left rotation.
 
         {
-            transform.Rotate(new Vector3(0, 0, turnSpeed) * Time.deltaTime); //Makes the vehicle turn, this time the rotation isn't in the negative, so as to turn the opposite direction.
+            transform.Rotate(new Vector3(0, 0, leftTurnSpeed) * Time.deltaTime); //Makes the vehicle turn, this time the rotation isn't in the negative, so as to turn the opposite direction.
         }
 
         transform.Translate(0, 1 * Time.deltaTime, 0); //Keeps the ship moving/
