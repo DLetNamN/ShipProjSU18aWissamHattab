@@ -38,6 +38,7 @@ public class PlaneColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        randomColor();
         ColorChanger();
     }
 }
