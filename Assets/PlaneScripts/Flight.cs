@@ -9,7 +9,10 @@ public class Flight : MonoBehaviour
     private float turnSpeed = 45f; //Turn/rotaion speed variable.
     private float leftTurnSpeed = 22.5f; //I could do (turnSpeed / 2), or just separate the different sides from the beginning.
 
+    void RandomSpeed()
+    {
 
+    }
 
     void movement()
     {

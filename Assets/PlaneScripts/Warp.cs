@@ -30,7 +30,7 @@ public class Warp : MonoBehaviour
 
     void Spawn()
     {
-        transform.position = new Vector3(UnityEngine.Random.Range(-7.5f, 9), UnityEngine.Random.Range(-4.69f, 5.2f), 0); 
+        transform.position = new Vector3(UnityEngine.Random.Range(-7.5f, 9), UnityEngine.Random.Range(-4.69f, 5.2f), 0); //randomises the spawn point based on the lenght and base.
     }
 
     // Use this for initialization

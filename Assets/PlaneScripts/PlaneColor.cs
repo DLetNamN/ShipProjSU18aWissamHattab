@@ -20,6 +20,8 @@ public class PlaneColor : MonoBehaviour
         }
     }
 
+
+
     // Use this for initialization
     void Start()
     {
