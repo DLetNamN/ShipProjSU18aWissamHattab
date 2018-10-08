@@ -20,7 +20,14 @@ public class PlaneColor : MonoBehaviour
         }
     }
 
+    void randomColor()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PlaneSprite.color = new Color(UnityEngine.Random.Range(0.1f, 1), UnityEngine.Random.Range(0.1f, 1), UnityEngine.Random.Range(0.1f, 1));
+        }
 
+    }
 
     // Use this for initialization
     void Start()
