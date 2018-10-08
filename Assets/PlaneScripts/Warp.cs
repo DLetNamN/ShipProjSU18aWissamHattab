@@ -28,12 +28,15 @@ public class Warp : MonoBehaviour
         }
     }
 
-
+    void Spawn()
+    {
+        transform.position = new Vector3(UnityEngine.Random.Range(-7.5f, 9), UnityEngine.Random.Range(-4.69f, 5.2f), 0); 
+    }
 
     // Use this for initialization
     void Start()
     {
-
+        Spawn();
     }
 
     // Update is called once per frame
