@@ -14,17 +14,17 @@ public class Warp : MonoBehaviour
         {
             transform.position = new Vector3(0, -4.8f, 0); //This sends the plane to the opposite side.
         }
-        if (transform.position.x >= 8.5) //This checks the same as before, but on the X axis.
-        {
-            transform.position = new Vector3(-8.5f, 0, 0); //sends it around.
-        }
         if (transform.position.y <= -6.30) //This does the same as before, but for the opposite side of the Y axis.
         {
             transform.position = new Vector3(0, 4.8f, 0); //Blah blah, sends it around
         }
-        if (transform.position.x <= -8.5) //Same for the opposite of the X axis
+        if (transform.position.x >= 10.3) //This checks the same as before, but on the X axis.
         {
-            transform.position = new Vector3(8.5f, 0, 0); //Sends around.
+            transform.position = new Vector3(-8.5f, 0, 0); //sends it around.
+        }
+        if (transform.position.x <= -8.8) //Same for the opposite of the X axis
+        {
+            transform.position = new Vector3(10.3f, 0, 0); //Sends around.
         }
     }
 
